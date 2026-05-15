@@ -10,11 +10,13 @@ import {
 } from "react-icons/bs";
 
 const AudioPlayer = function () {
+  const[isPlaying ,setIsPlaying] = useState(false)
+
   return (
     <>
       <div className="player-bar">
         {/*MOBILE*/}
-        <div className="mobile-only flex-column w-100 display-flex display-lg-none">
+        <div className="mobile-only flex-column w-100 d-flex d-lg-none">
           <div className="progress-track">
             <div className="progress-fill" />
           </div>
@@ -38,7 +40,7 @@ const AudioPlayer = function () {
               <div className="player-artist">—</div>
             </div>
             <button className="player-btn" style={{ fontSize: "28px" }}>
-              {/* {isPlaying ? <BsFillPauseFill /> : <BsFillPlayFill />} */}
+              {isPlaying ? <BsFillPauseFill /> : <BsFillPlayFill />}
             </button>
             <button className="player-btn" style={{ fontSize: "22px" }}>
               <BsSkipEndFill />
@@ -47,7 +49,7 @@ const AudioPlayer = function () {
         </div>
 
         {/*DESKTOP*/}
-        <div className="desktop-only display-none display-lg-flex align-items-center w-100 gap-4">
+        <div className="desktop-only d-none d-lg-flex align-items-center w-100 gap-4">
           {/*Sinistra*/}
           <div
             className="d-flex align-items-center gap-3"
@@ -60,7 +62,7 @@ const AudioPlayer = function () {
               <BsSkipStartFill />
             </button>
             <button className="player-btn" style={{ fontSize: "28px" }}>
-              {/* {isPlaying ? <BsFillPauseFill /> : <BsFillPlayFill />} */}
+              {isPlaying ? <BsFillPauseFill /> : <BsFillPlayFill />}
             </button>
             <button className="player-btn" style={{ fontSize: "20px" }}>
               <BsSkipEndFill />
