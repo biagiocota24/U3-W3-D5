@@ -55,7 +55,7 @@ const MyNavbar = function () {
           </div>
 
           <Navbar.Collapse id="basic-navbar-nav " className="w-100">
-            <InputGroup className="ms-2 my-2">
+            <InputGroup className="px-2 my-2">
               <button className="text-danger border border-1 bg-transparent rounded-start px-2">
                 <FaSearch />
               </button>
